@@ -14,18 +14,17 @@ export default class Ballot extends Component {
 
 	componentWillMount() {
 		ajax('https://young-gorge-64909.herokuapp.com/candidate').then(candidates => {
-			this.setState({candidates})
+			this.setState({candidates});
 		})
 	}
 
 	candidateMapper(candidate) {
 		return (
 			<div>
-				<input type="radio" name="vote" value={`${candidate.name}     ${candidate.party}`} />
+				<input type="radio" name="vote" value={`${candidate.name}  ${candidate.party}`} />
 			</div>
 		)
 	}
-
 
 	dataHandler(data) => {
 		console.log(data)
@@ -33,8 +32,6 @@ export default class Ballot extends Component {
 			hashHistory.push('/dashboard');
 		})
 	}
-
-
 
 	render(){
 		return(
