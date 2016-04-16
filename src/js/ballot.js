@@ -39,16 +39,10 @@ export default class Ballot extends Component {
 	render(){
 		return(
 			<div>
-<<<<<<< HEAD
 				<SSF onData={this.dataHandler}>
 					{candidates.map(::this.candidateMapper)}
 					<button>Submit Your Vote</button>
 				</SSF>
-=======
-				<h1>Ballot</h1>
-				<Link to="/dashboard">Submit Vote</Link>
-				<Link to="/dashboard">Cancel</Link>
->>>>>>> 0e703d7c3c587131bdc819ccb8aa2459dd697dcb
 			</div>
 		)
 	}
