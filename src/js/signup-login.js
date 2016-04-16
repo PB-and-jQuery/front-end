@@ -9,7 +9,8 @@ export default class SignUpLogin extends Component {
 		return(
 			<div>
 				<h1>Welcome</h1>
-				<Link to="/dashboard">Go to Dash</Link>
+				<Link to="/dashboard">Login</Link>
+				<Link to="/dashboard">Register</Link>
 			</div>
 		)
 	}

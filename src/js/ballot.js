@@ -9,7 +9,8 @@ export default class Ballot extends Component {
 		return(
 			<div>
 				<h1>Ballot</h1>
-				<Link to="/dashboard">Done</Link>
+				<Link to="/dashboard">Submit Vote</Link>
+				<Link to="/dashboard">Cancel</Link>
 			</div>
 		)
 	}
