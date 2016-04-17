@@ -11,10 +11,8 @@ export default class Dashboard extends Component {
 		return(
 			<div>
 				<h1>Dashboard</h1>
-				<Chart />
 				<Link to="/ballot">Vote Now</Link>
 				<Link to="/">Log Out</Link>
-				<Chart />
 			</div>
 		)
 	}
