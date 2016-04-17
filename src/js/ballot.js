@@ -21,21 +21,22 @@ export default class Ballot extends Component {
 					<p>City of Atlanta</p>
 				</div>
 				
-				<SSF onData={this.dataHandler}>
-					<div>
-						<input type="radio" name="vote" value="John D. Isaacks | Republican Candidate" /> John D. Isaacks | Republican Candidate
-					</div>
-					<div>
-						<input type="radio" name="vote" value="Britton Stanhope Butler | Democratic Candidate" /> Britton Stanhope Butler, Esq. | Democratic Candidate
-					</div>
-					<div>
-						<input type="radio" name="vote" value="Lindsey Owings | Independent Candidate" /> Lindsey Owings | Independent Candidate
-					</div>
-					<div>
-						<button>Submit Your Vote</button>
-					</div>
-				</SSF>
-
+				<div className="ballot-form">
+					<SSF onData={this.dataHandler}>
+						<div>
+							<input type="radio" name="vote" value="John D. Isaacks | Republican Candidate" /> John D. Isaacks | Republican Candidate
+						</div>
+						<div>
+							<input type="radio" name="vote" value="Britton Stanhope Butler | Democratic Candidate" /> Britton Stanhope Butler, Esq. | Democratic Candidate
+						</div>
+						<div>
+							<input type="radio" name="vote" value="Lindsey Owings | Independent Candidate" /> Lindsey Owings | Independent Candidate
+						</div>
+						<div>
+							<button>Submit Your Vote</button>
+						</div>
+					</SSF>
+				</div>
 			</div>
 		)
 	}
