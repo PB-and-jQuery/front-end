@@ -13,7 +13,7 @@ export default class Ballot extends Component {
 	}
 
 	componentWillMount() {
-		ajax('https://young-gorge-64909.herokuapp.com/candidate').then(candidate => {
+		ajax('https://young-gorge-64909.herokuapp.com/candidates').then(candidate => {
 			this.setState({candidate})
 		})
 	}
