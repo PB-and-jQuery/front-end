@@ -21,7 +21,7 @@ export default class Ballot extends Component {
 	candidateMapper(candidate) {
 		return (
 			<div>
-				<input type="radio" name="vote" value={`${candidate.name}     ${candidate.party}`} />
+				<input type="radio" name="vote" value={`${candidate.name}  ${candidate.party}`} />
 			</div>
 		)
 	}
@@ -38,20 +38,6 @@ export default class Ballot extends Component {
 			hashHistory.push('/dashboard');
 		})
 	}
-
-	// dataHandler(data) => {
-	// 	console.log(data)
-	// 	ajax({
-	// 		url: 'https://young-gorge-64909.herokuapp.com/votes',
-	// 		type: 'POST',
-	// 		data: data,
-	// 		cache: false,
-	// 		dataType: 'json'
-	// 	}).then({
-	// 		hashHistory.push('/dashboard');
-	// 	})
-	// };
-
 
 
 	render(){

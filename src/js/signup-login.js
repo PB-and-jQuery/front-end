@@ -75,8 +75,10 @@ export default class SignUpLogin extends Component {
 
 						<input type="email" name="email" placeholder=" Email" />
 
+						<label>Voter ID must be exactly 6 characters long</label>
 						<input type="text" name="voter_id" placeholder=" Georgia Voter ID #" />
 
+						<label>Password must be 8 character minimum</label>
 						<input type="password" name="password" placeholder=" Password" />
 
 						<button>Register Me</button>
