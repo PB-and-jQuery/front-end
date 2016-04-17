@@ -20,9 +20,6 @@ input, button{
 	border-radius: 3px;
 	box-shadow: none;
 }
-p{
-	font-size: 12px;
-}
 
 // MAIN
 
@@ -62,12 +59,12 @@ p{
 
 // DASHBOARD
 
-
 // BALLOT
 
 .ballot {
 	.ballot-title {
-		font-size: 50px;
+		text-align: center;
+		font-size: 30px;
 	}
 	form {
 		font-size: 40px;
@@ -75,5 +72,16 @@ p{
 	button {
 		height: 20px;
 		width: 400px;
+	}
+	.ballot-form{
+		width: 600px;
+		
+	margin-left: 350px;
+		border: 1px solid $gray;
+		border-radius: 4px;
+		div{
+			font-size: 22px;
+			margin: 10px 0px;
+		}
 	}
 }

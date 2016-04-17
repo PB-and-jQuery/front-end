@@ -96,10 +96,12 @@ export default class Ballot extends Component {
 					<button>Submit Your Vote</button>
 				</SSF>
 
+
 			</div>
 		)
 	}
 }
+
 
 
 
