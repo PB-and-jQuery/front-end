@@ -7,19 +7,15 @@ import { ajax } from 'jquery';
 export default class Ballot extends Component {
 
 	dataHandler(){
-		function confirmVote() {
-			if (confirm('Are you sure you want to cast your vote for this candidate?')) {
-				hashHistory.push('/dashboard');
-				alert('Thank you for submitting your vote for Mayor of Atlanta!');
-			}	
-		}
+		hashHistory.push('/dashboard');
+		alert('Thank you for submitting your vote for Mayor of Atlanta!');
 	}
 
 
 	render(){
 		return(
-			<div>
-				<div>
+			<div className="ballot">
+				<div className="ballot-title">
 					2017 Mayoral Election | City of Atlanta
 				</div>
 				<SSF onData={this.dataHandler}>
@@ -27,7 +23,7 @@ export default class Ballot extends Component {
 						<input type="radio" name="vote" value="John D. Isaacks | Republican Candidate" /> John D. Isaacks | Republican Candidate
 					</div>
 					<div>
-						<input type="radio" name="vote" value="Britton Stanhope Butler | Democratic Candidate" /> Britton Stanhope Butler | Democratic Candidate
+						<input type="radio" name="vote" value="Britton Stanhope Butler | Democratic Candidate" /> Britton Stanhope Butler, Esq. | Democratic Candidate
 					</div>
 					<div>
 						<input type="radio" name="vote" value="Lindsey Owings | Independent Candidate" /> Lindsey Owings | Independent Candidate

@@ -3,3 +3,45 @@
 // Turn on freq used libraries
 // @import 'normalize-css/normalize';
 // @import 'font-awesome/scss/font-awesome';
+
+
+* {
+	font-family: Helvetica;
+}
+
+// MAIN
+.main {
+	width: 1280px;
+	div {
+		list-style-type: none;
+		display: inline-block;
+		img {
+			width: 20%;
+		}
+	}
+
+}
+
+
+// DASHBOARD
+
+
+
+// SIGNUP LOGIN
+
+
+
+// BALLOT
+
+.ballot {
+	.ballot-title {
+		font-size: 50px;
+	}
+	form {
+		font-size: 40px;
+	}
+	button {
+		height: 20px;
+		width: 400px;
+	}
+}
