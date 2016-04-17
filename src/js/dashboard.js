@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom';
 import { Link, Router, Route, IndexRoute, hashHistory} from 'react-router';
 import SSF from 'react-simple-serial-form';
+import Donut from './donut';
 
 export default class Dashboard extends Component {
 
@@ -11,6 +12,7 @@ export default class Dashboard extends Component {
 				<h1>Dashboard</h1>
 				<Link to="/ballot">Vote Now</Link>
 				<Link to="/">Log Out</Link>
+				<Donut />
 			</div>
 		)
 	}
