@@ -21,8 +21,6 @@ export default class Main extends Component {
 
 
 				{ this.props.children }
-		        
-		        <footer>Official State of Georgia Voting Poll</footer>
 
 			</div>
 		)

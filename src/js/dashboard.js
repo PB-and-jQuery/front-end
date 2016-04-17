@@ -10,9 +10,9 @@ export default class Dashboard extends Component {
 	render(){
 		return(
 			<div>
-				<h1>Dashboard</h1>
-				<Link to="/ballot">Vote Now</Link>
-				<Link to="/">Log Out</Link>
+				<h2>Dashboard</h2>
+				<Link to="/ballot"><button>Vote Now</button></Link>
+				<Link to="/"><button>Log Out</button></Link>
 			</div>
 		)
 	}
