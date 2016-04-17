@@ -65,6 +65,7 @@ export default class Ballot extends Component {
 			</div>
 		)
 	}
+
 	render(){
 		console.log('C');
 		let { candidates } = this.state;
@@ -72,11 +73,18 @@ export default class Ballot extends Component {
 		// let normalData = candidates.candidates;
 		// console.log('normalData = ', normalData)
 		return(
-			<div>
+			<div className="ballot">
+				
+				<div className="ballot-title">
+					<p>2017 Mayoral Election</p>
+					<p>City of Atlanta</p>
+				</div>
+				
 				<SSF onData={this.dataHandler}>
 					{candidates.map(::this.candidateMapper)}
 					<button>Submit Your Vote</button>
 				</SSF>
+
 			</div>
 		)
 	}

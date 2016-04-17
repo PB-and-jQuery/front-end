@@ -1,34 +1,66 @@
 /* CSS Entry Point */
-
 // Turn on freq used libraries
 // @import 'normalize-css/normalize';
 // @import 'font-awesome/scss/font-awesome';
-
+$gray: lighten(gray, 15%);
+$light-gray: lighten(gray, 35%);
 
 * {
 	font-family: Helvetica;
+	box-sizing: content-box;
+}
+h1{
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 2px;
+	font-size: 2em;
+}
+input, button{
+	font-size: 22px;
+	margin: 7px;
+	border-radius: 3px;
+	box-shadow: none;
+}
+p{
+	font-size: 12px;
 }
 
 // MAIN
+
 .main {
-	width: 1280px;
+	width: 100%;
 	div {
 		list-style-type: none;
-		display: inline-block;
-		img {
-			width: 20%;
+		// display: inline-block;
+	}
+	.main-header, footer{
+		// border: 1px solid red;
+		background-color: $gray;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		img{
+			width: 175px;
+			margin-top: 20px;
 		}
 	}
-
 }
 
+// SIGNUP LOGIN
+.login-reg-parent{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	// border: 3px solid blue;
+}
+
+.register-form, .login-form{
+	width: 300px;
+	// border: 1px solid red;
+	margin: 0 auto;
+}
 
 // DASHBOARD
-
-
-
-// SIGNUP LOGIN
-
 
 
 // BALLOT

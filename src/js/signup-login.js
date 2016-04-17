@@ -51,39 +51,68 @@ export default class SignUpLogin extends Component {
 	render(){
 		return(
 			<div>
-				<h1>Welcome</h1>
 				
-				<div>
-					<SSF onData={ this.loginDataHandler }>
-						<h1>Login</h1>
+				<div className="login-reg-parent">
 
-						<input type="email" name="email" placeholder=" Email" />
+					<div className="login-form">
+						<SSF onData={ this.loginDataHandler }>
+							<div>
+							<h2>Login</h2>
+							</div>
 
-						<input type="password" name="password" placeholder=" Password" />
+							<div>
+							<input type="email" name="email" placeholder=" Email" />
+							</div>
 
-						<button>Log in</button>
-					</SSF>
-				</div>
+							<div>
+							<input type="password" name="password" placeholder=" Password" />
+							</div>
 
-				<div>
-					<SSF onData={ ::this.registerDataHandler }>
-						<h1>Register</h1>
+							<div>
+							<button>Log in</button>
+							</div>
+						</SSF>
+					</div>
 
-						<input type="text" name="first_name" placeholder=" First Name" />
+					<div className="register-form">
+						<SSF onData={ ::this.registerDataHandler }>
+							<div>
+							<h2>Register</h2>
+							</div>
 
-						<input type="text" name="last_name" placeholder=" Last Name" />
+							<div>
+							<input type="text" name="first_name" placeholder=" First Name" />
+							</div>
 
-						<input type="email" name="email" placeholder=" Email" />
+							<div>
+							<input type="text" name="last_name" placeholder=" Last Name" />
+							</div>
 
-						<label>Voter ID must be exactly 6 characters long</label>
-						<input type="text" name="voter_id" placeholder=" Georgia Voter ID #" />
+							<div>
+							<input type="email" name="email" placeholder=" Email" />
+							</div>
 
-						<label>Password must be 8 character minimum</label>
-						<input type="password" name="password" placeholder=" Password" />
+							<div>
+							<label><p>Voter ID must be exactly 6 characters long</p></label>
+							</div>
 
-						<button>Register Me</button>
+							<div>
+							<input type="text" name="voter_id" placeholder=" Georgia Voter ID #" />
+							</div>
 
-					</SSF>
+							<div>
+							<label><p>Password must be 8 character minimum</p></label>
+							</div>
+
+							<div>
+							<input type="password" name="password" placeholder=" Password" />
+							</div>
+
+							<div>
+							<button>Register Me</button>
+							</div>	
+						</SSF>
+					</div>
 				</div>
 			</div>
 		)
