@@ -6,9 +6,52 @@ import { ajax } from 'jquery';
 
 export default class Ballot extends Component {
 
+<<<<<<< HEAD
+	constructor(...args) {
+		super(...args);
+
+		this.state = { candidate: [] };
+	}
+
+	componentWillMount() {
+		ajax('https://young-gorge-64909.herokuapp.com/candidates').then(candidate => {
+			this.setState({candidate})
+		})
+	}
+
+	candidateMapper(candidate) {
+		return (
+			<div>
+				<input type="radio" name="vote" value={`${candidate.name}  ${candidate.party}`} />
+			</div>
+		)
+	}
+
+	dataHandler(vote){
+		ajax({
+			url: 'https://young-gorge-64909.herokuapp.com/votes',
+			type: 'POST',
+			data: vote,
+			cache: false,
+			dataType: 'json',
+		}).then(response => {
+			console.log('Vote Response-->', response);
+			hashHistory.push('/dashboard');
+		})
+=======
 	dataHandler(){
+<<<<<<< HEAD
 		hashHistory.push('/dashboard');
 		alert('Thank you for submitting your vote for Mayor of Atlanta!');
+=======
+		function confirmVote() {
+			if (confirm('Are you sure you want to cast your vote for this candidate?')) {
+				hashHistory.push('/dashboard');
+				alert('Thank you for submitting your vote for Mayor of Atlanta!');
+			}	
+		}
+>>>>>>> 16b90cf33808adc8dd2d1b29bb7a1ab8831ab9a9
+>>>>>>> 4d1e9fc09a66f45144ca8a45da1e862116ce76bb
 	}
 
 

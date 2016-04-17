@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom';
 import { Link, Router, Route, IndexRoute, hashHistory} from 'react-router';
 import SSF from 'react-simple-serial-form';
-import Donut from './donut';
+import Chart from './chart';
+import ChartBar from './chart-bar';
 
 export default class Dashboard extends Component {
 
@@ -10,9 +11,10 @@ export default class Dashboard extends Component {
 		return(
 			<div>
 				<h1>Dashboard</h1>
+				<Chart />
 				<Link to="/ballot">Vote Now</Link>
 				<Link to="/">Log Out</Link>
-				<Donut />
+				<Chart />
 			</div>
 		)
 	}
