@@ -51,11 +51,11 @@ export default class SignUpLogin extends Component {
 	render(){
 		return(
 			<div>
-				<h1>Welcome</h1>
+				<h2>Welcome</h2>
 				
 				<div>
 					<SSF onData={ this.loginDataHandler }>
-						<h1>Login</h1>
+						<h2>Login</h2>
 
 						<input type="email" name="email" placeholder=" Email" />
 
@@ -67,7 +67,7 @@ export default class SignUpLogin extends Component {
 
 				<div>
 					<SSF onData={ ::this.registerDataHandler }>
-						<h1>Register</h1>
+						<h2>Register</h2>
 
 						<input type="text" name="first_name" placeholder=" First Name" />
 

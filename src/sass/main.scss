@@ -2,23 +2,40 @@
 // Turn on freq used libraries
 // @import 'normalize-css/normalize';
 // @import 'font-awesome/scss/font-awesome';
-
+$gray: lighten(gray, 15%);
 
 * {
 	font-family: Helvetica;
 }
 
+h1{
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 2px;
+}
+
+// h2{
+// 	font-family: 'Helvetica';
+// }
+
 // MAIN
 .main {
-	width: 1280px;
+	width: 100%;
 	div {
 		list-style-type: none;
-		display: inline-block;
-		img {
-			width: 20%;
+		// display: inline-block;
+	}
+	.main-header{
+		// border: 1px solid red;
+		background-color: $gray;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		img{
+			width: 225px;
+			margin-top: 35px;
 		}
 	}
-
 }
 
 
