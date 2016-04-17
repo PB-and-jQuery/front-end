@@ -12,13 +12,15 @@ export default class Ballot extends Component {
 
 	}
 
-
 	render(){
 		return(
 			<div className="ballot">
+				
 				<div className="ballot-title">
-					2017 Mayoral Election | City of Atlanta
+					<p>2017 Mayoral Election</p>
+					<p>City of Atlanta</p>
 				</div>
+				
 				<SSF onData={this.dataHandler}>
 					<div>
 						<input type="radio" name="vote" value="John D. Isaacks | Republican Candidate" /> John D. Isaacks | Republican Candidate
@@ -33,6 +35,7 @@ export default class Ballot extends Component {
 						<button>Submit Your Vote</button>
 					</div>
 				</SSF>
+
 			</div>
 		)
 	}

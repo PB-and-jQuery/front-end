@@ -15,7 +15,7 @@ export default class Main extends Component {
 						<img className="main-flag" src="../images/georgia-flag.jpg" alt="Flag of the State of Georgia" />
 					</div>
 					
-					<div><h1>VoteLanta</h1></div>
+					<div><h1>Vote ATL</h1></div>
 				
 				</div>
 
