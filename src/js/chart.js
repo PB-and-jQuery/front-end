@@ -47,6 +47,7 @@
 import React, { Component } from 'react';
 // import { render } from 'react-dom';
 import ChartBar from './chart-bar';
+import { ajax } from 'jquery';
 
 
 let colors = ['#B22222', '#0000CD', '#00fa9a']
@@ -57,40 +58,54 @@ export default class Chart extends Component {
       super(...args);
 
       this.state = { 
-        data: [
-          { label: 'Republican John D. Isaacks', percent: 50, color: 'red' },
-          { label: 'Democratic Britton Stanhope Butler', percent: 0, color: 'green' },
-          { label: 'Independent Lindsey Owings', percent: 0, color: 'blue' } 
-        ]
+        // data: [
+        //   { label: 'Republican John D. Isaacks', percent: 50, color: 'red' },
+        //   { label: 'Democratic Britton Stanhope Butler', percent: 0, color: 'green' },
+        //   { label: 'Independent Lindsey Owings', percent: 0, color: 'blue' } 
+        // ]
+        data: []
       }
     }
 
     componentWillMount() {
-      let int = setInterval(() => {
-        let {data} = this.state;
-        data.forEach((obj, index) => {
-          let amount = Math.random() * 5;
-          obj.percent += amount;
-          obj.color = colors[ index % colors.length ];
-        });
+      this.int = setInterval(() => {
+        // let {data} = this.state;
+        // data.forEach((obj, index) => {
+        //   let amount = Math.random() * 5;
+        //   obj.percent += amount;
+        //   obj.color = colors[ index % colors.length ];
+        // });
 
-        this.setState({data});
+        // this.setState({data});
+
+        ajax('https://young-gorge-64909.herokuapp.com/candidates')
+          .then(resp => {
+            console.log('resp', resp);
+            this.setState({data: resp.candidates})
+          })
+
       }, 1000);
 
 
-      setTimeout(() => {
-        clearInterval(int);
 
-        let {data} = this.state;
 
-        let winner = data.sort((a, b) => a > b ? -1 : 1)[0].label;
-        alert('JD Isaacks is your new Atlanta Mayor!');
-      }, 5000);
+      // setTimeout(() => {
+      //   clearInterval(int);
+
+      //   let {data} = this.state;
+
+      //   let winner = data.sort((a, b) => a > b ? -1 : 1)[0].label;
+      //   alert('JD Isaacks is your new Atlanta Mayor!');
+      // }, 5000);
+    }
+    
+    componentWillUnmount() {
+      clearInterval(this.int);
     }
 
     getBar(barData) {
-      let { label, percent, color } = barData;
-      return <ChartBar key={label} {...barData}/>
+      let { id } = barData;
+      return <ChartBar key={id} {...barData}/>
     }
 
     render() {

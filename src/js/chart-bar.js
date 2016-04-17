@@ -20,23 +20,33 @@
 //   }
 // }
 
+function getColor(party) {
+  let map = {
+    'republican' : 'red',
+    'democrate': 'blue',
+    'independent' : 'green'
+  }
+
+  return map[ party.toLowerCase() ]
+}
+
 import React, { Component, PropTypes } from 'react';
 
 export default class ChartBar extends Component {
 
   static propTypes = {
-    percent: PropTypes.number.isRequired,
-    label: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired
+    votes: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    party: PropTypes.string.isRequired
   }
 
   render() {
-    let { percent, label, color } = this.props;
-    percent = Math.min(percent, 100);
+    let { votes, name, party } = this.props;
+    // percent = Math.min(percent, 100);
     return (
       <div className="chart-bar" style={{marginTop: 10, marginBottom: 10}}>
-        <div className="label">{label}</div>
-        <div className="bar" style={{height: 20, width: `${percent}%`, background: color}}></div>
+        <div className="label">{name}</div>
+        <div className="bar" style={{height: 20, width: (votes * 10), background: getColor(party)}}></div>
       </div>
     );
   }

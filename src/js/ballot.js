@@ -6,10 +6,20 @@ import { ajax } from 'jquery';
 
 export default class Ballot extends Component {
 
-	dataHandler() {
-		hashHistory.push('/dashboard');
-		alert('Thank you for submitting your vote for Mayor of Atlanta!');
-		console.log('E');
+	dataHandler(data) {
+		// console.log('DATA =>', data)
+
+		data.user_id = 1
+
+		ajax({
+			url: `/candidates/${data.candidate_id}/votes`,
+			data: data,
+			type: 'POST'
+		}).then(() => {
+			hashHistory.push('/dashboard');
+		})
+		// alert('Thank you for submitting your vote for Mayor of Atlanta!');
+		// console.log('E');
 	}
 
 
@@ -61,7 +71,8 @@ export default class Ballot extends Component {
 		console.log('D');
 		return (
 			<div>
-				<input type="radio" name="vote" value={`${candidate.name}  ${candidate.party}`} />
+				{`${candidate.name}  ${candidate.party}`}
+				<input type="radio" name="candidate_id" value={`${candidate.id}`} />
 			</div>
 		)
 	}
